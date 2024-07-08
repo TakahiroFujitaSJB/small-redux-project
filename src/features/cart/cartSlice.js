@@ -23,11 +23,11 @@ export const addItem = (itemToAdd) => {
       case 'cart/addItem': {
         const { name, price } = action.payload;
   
-        // if the item already exists, increase the quantity by 1, otherwise set it to 1
+     
         const quantity = cart[name] ? cart[name].quantity + 1 : 1;
         const newItem = { price, quantity };
   
-        // Add the new item to the cart (or replace it if it existed already)
+     
         return { 
           ...cart, 
           [name]: newItem 
@@ -37,12 +37,12 @@ export const addItem = (itemToAdd) => {
         const { name, newQuantity } = action.payload;
         const itemToUpdate = cart[name];
   
-        // Create a copy of itemToUpdate and update the quantity prop.
+    
         const updatedItem = {
           ...itemToUpdate,
           quantity: newQuantity
         }
-        // Return a copy of the cart with the updatedItem included.
+  
         return {
           ...cart,
           [name]: updatedItem
