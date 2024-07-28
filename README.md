@@ -1,4 +1,4 @@
-## Small project with me testing our redux
+## Small project with me testing out redux
 
 
 
